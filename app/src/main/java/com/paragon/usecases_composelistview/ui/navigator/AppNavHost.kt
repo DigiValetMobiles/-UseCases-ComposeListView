@@ -19,6 +19,8 @@ import com.paragon.usecases_composelistview.ui.components.drag_drop_list_item.Dr
 import com.paragon.usecases_composelistview.ui.components.drag_drop_list_item.dragDropItemGraph
 import com.paragon.usecases_composelistview.ui.components.edittext_list.EditTextListDestination
 import com.paragon.usecases_composelistview.ui.components.edittext_list.editTextListGraph
+import com.paragon.usecases_composelistview.ui.components.expandable_list.ExpandableListDestination
+import com.paragon.usecases_composelistview.ui.components.expandable_list.expandableListGraph
 import com.paragon.usecases_composelistview.ui.components.large_list_state.LargeListStateDestination
 import com.paragon.usecases_composelistview.ui.components.large_list_state.largeListStateGraph
 import com.paragon.usecases_composelistview.ui.components.multiple_gesture.MultipleGestureListDestination
@@ -33,6 +35,8 @@ import com.paragon.usecases_composelistview.ui.components.sticky_actionable_item
 import com.paragon.usecases_composelistview.ui.components.sticky_actionable_item_list.stickyActionableListGraph
 import com.paragon.usecases_composelistview.ui.components.variable_size_list.VariableSizeItemsListDestination
 import com.paragon.usecases_composelistview.ui.components.variable_size_list.variableSizeItemsListGraph
+import com.paragon.usecases_composelistview.ui.components.view_types_list.ViewTypesListDestination
+import com.paragon.usecases_composelistview.ui.components.view_types_list.viewTypesListGraph
 
 @Composable
 fun AppNavHost(
@@ -81,6 +85,15 @@ fun AppNavHost(
             },
             navigateToNestedVHLists = {
                 navController.navigate(NestedVHListDestination.ROUTE)
+            },
+            navigateToDragDropIn2Lists = {
+//                navController.navigate(DrogDropInListsDestination.ROUTE) TODO: Need to be done
+            },
+            navigateToViewTypesLists = {
+                navController.navigate(ViewTypesListDestination.ROUTE)
+            },
+            navigateToExpandableList = {
+                navController.navigate(ExpandableListDestination.ROUTE)
             }
         )
 
@@ -107,5 +120,9 @@ fun AppNavHost(
         nestedVerticalListGraph()
 
         nestedVHListGraph()
+
+        viewTypesListGraph()
+
+        expandableListGraph()
     }
 }

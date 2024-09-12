@@ -150,7 +150,10 @@ fun StoryCard(size: Dp = 80.dp, url: String, userName: String) {
 
 enum class PostType {
     STORY,
-    FEED
+    FEED,
+    EVENT,
+    POLL,
+    CTA
 }
 
 data class PostItems(

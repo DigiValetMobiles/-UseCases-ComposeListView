@@ -32,6 +32,9 @@ fun HomeScreen(
     navigateToEditTextList: () -> Unit,
     navigateToNestedVerticalList: () -> Unit,
     navigateToNestedVHLists: () -> Unit,
+    navigateToDragDropIn2Lists: () -> Unit,
+    navigateToViewTypesLists: () -> Unit,
+    navigateToExpandableList: () -> Unit,
 ) {
     val options = listOf(
         "Half Swipe to reveal & Full to delete.",
@@ -46,7 +49,10 @@ fun HomeScreen(
         "Changeable List View type",
         "List with edittext",
         "Nested Lists",
-        "Nested Vertical Lists"
+        "Nested Vertical Lists",
+        "Drag Drop Items in 2 Lists",
+        "Multi View Type Support",
+        "Parent/Child Expandable List",
     )
     Scaffold(modifier = Modifier.safeContentPadding()) { innerPadding->
         Column(modifier = Modifier.padding(innerPadding)) {
@@ -84,6 +90,9 @@ fun HomeScreen(
                                 10 -> navigateToEditTextList()
                                 11 -> navigateToNestedVHLists()
                                 12 -> navigateToNestedVerticalList()
+                                13 -> navigateToDragDropIn2Lists()
+                                14 -> navigateToViewTypesLists()
+                                15 -> navigateToExpandableList()
                             }
                         }.padding(top = 10.dp)
                     )

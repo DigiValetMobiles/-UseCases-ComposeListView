@@ -20,6 +20,9 @@ fun NavGraphBuilder.homePageGraph(
     navigateToEditTextList: () -> Unit,
     navigateToNestedVerticalList: () -> Unit,
     navigateToNestedVHLists: () -> Unit,
+    navigateToDragDropIn2Lists: () -> Unit,
+    navigateToViewTypesLists: () -> Unit,
+    navigateToExpandableList: () -> Unit,
 ) {
     composable(
         route = HomeDestination.ROUTE
@@ -36,7 +39,10 @@ fun NavGraphBuilder.homePageGraph(
             navigateToChangeAbleListView,
             navigateToEditTextList,
             navigateToNestedVerticalList,
-            navigateToNestedVHLists
+            navigateToNestedVHLists,
+            navigateToDragDropIn2Lists,
+            navigateToViewTypesLists,
+            navigateToExpandableList
         )
     }
 }
