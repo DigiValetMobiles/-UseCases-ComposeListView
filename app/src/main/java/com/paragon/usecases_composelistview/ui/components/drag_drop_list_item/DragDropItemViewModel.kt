@@ -7,7 +7,7 @@ import com.paragon.usecases_composelistview.ui.components.drag_drop_list_item.ut
 
 class DragDropItemViewModel {
     var items by mutableStateOf(List(500) {
-        "Drag Me$it"
+        "Drag Me-$it"
     })
 
 
