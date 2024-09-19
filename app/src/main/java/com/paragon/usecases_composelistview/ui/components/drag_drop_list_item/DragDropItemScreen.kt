@@ -52,8 +52,8 @@ fun DragDropItemScreen() {
                         val elevation = animateDpAsState(if (it) 8.dp else 0.dp, label = "")
                                                                     // Define an object to show elevation of item on drag
                         Column(Modifier
-                            .detectReorderAfterLongPress(state).shadow(elevation.value)
-                                                                    // Add long press listener modifier with item
+                            .detectReorderAfterLongPress(state)     // Add long press listener modifier with item
+                            .shadow(elevation.value)                // Use elevation as shadow with item
                         ) {
                             Text(
                                 text = item,
